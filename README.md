@@ -10,7 +10,7 @@ Made this because it was hella annoying to type out FX everytime I wanna send a 
 
 ## Authors
 
-- [@Dahnaa](https://www.github.com/Dahnaa) | Discord: @dahnaa
+> [@Dahnaa](https://www.github.com/Dahnaa) | Discord: @dahnaa
 
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
