@@ -26,6 +26,7 @@ type FXMode = "none" | "domain" | "gallery" | "text";
 
 const MODES: FXMode[] = ["none", "domain", "gallery", "text"];
 const MODE_PREFIX: Record<FXMode, string> = { none: "", domain: "d.", gallery: "g.", text: "t." };
+
 const VERSION = "1.0.0";
 const UPDATE_URL = "https://github.com/Dahnaa/fxTwitter-plugin";
 
@@ -46,14 +47,7 @@ const settings = definePluginSettings({
             default: m === "none"
         })),
     },
-    version: {
-        type: OptionType.STRING,
-        default: VERSION,
-        description: "Installed plugin version",
-        disabled: true
-    }
 });
-
 
 const FXIcon: IconComponent = ({ height = 20, width = 20, className }) => {
     const { mode } = settings.use(["mode"]);
@@ -114,7 +108,7 @@ function cleanMessage(msg: MessageObject) {
 
 export default definePlugin({
     name: "FXTwitter",
-    description: "Automatically rewrites Twitter/X links into FXTwitter links with toggleable modes.",
+    description: `(v${VERSION}) Automatically rewrites Twitter/X links into FXTwitter links with toggleable modes. ${UPDATE_URL}`,
     authors: [{ name: "@dahnaa, Dona", id: 821451701331820615n }],
     settings,
 
@@ -123,8 +117,8 @@ export default definePlugin({
         notified = true;
 
         showNotification({
-            title: "FXTwitter",
-            body: "Click to open the GitHub repository for updates.",
+            title: "fxTwitter",
+            body: `(v${VERSION}) View the fxTwitter GitHub repository.`,
             color: "#1da1f2",
             onClick: () => window.open(UPDATE_URL)
         });
