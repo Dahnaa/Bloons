@@ -23,14 +23,13 @@ import { definePluginSettings } from "@api/Settings";
 import definePlugin, { IconComponent, OptionType } from "@utils/types";
 
 type FXMode = "none" | "domain" | "gallery" | "text";
+let notified = false;
 
 const MODES: FXMode[] = ["none", "domain", "gallery", "text"];
 const MODE_PREFIX: Record<FXMode, string> = { none: "", domain: "d.", gallery: "g.", text: "t." };
-
 const VERSION = "1.0.0";
 const UPDATE_URL = "https://github.com/Dahnaa/fxTwitter-plugin";
-
-let notified = false;
+const TWITTER_REGEX = /https?:\/\/(?:www\.)?(?:twitter|x)\.com\/\S+/gi;
 
 const settings = definePluginSettings({
     showIcon: {
@@ -47,10 +46,17 @@ const settings = definePluginSettings({
             default: m === "none"
         })),
     },
+    notifications: {
+        type: OptionType.BOOLEAN,
+        default: true,
+        description: "Enable the startup GitHub notification.",
+    },
 });
 
 const FXIcon: IconComponent = ({ height = 20, width = 20, className }) => {
-    const { mode } = settings.use(["mode"]);
+    const { mode, showIcon } = settings.use(["mode", "showIcon"]);
+    if (!showIcon) return null;
+
     const letter = mode === "none" ? "FX" : mode[0].toUpperCase();
 
     return (
@@ -63,18 +69,18 @@ const FXIcon: IconComponent = ({ height = 20, width = 20, className }) => {
         >
             <text
                 x="12"
-                y="13"
+                y="14"
                 textAnchor="middle"
                 dominantBaseline="middle"
-                fontSize="20"
+                fontSize="21"
                 fontWeight="700"
-                fontFamily="Arial, Helvetica, sans-serif"
             >
                 {letter}
             </text>
         </svg>
     );
 };
+
 
 const FXButton: ChatBarButtonFactory = ({ isMainChat }) => {
     const { mode, showIcon } = settings.use(["mode", "showIcon"]);
@@ -95,8 +101,6 @@ const FXButton: ChatBarButtonFactory = ({ isMainChat }) => {
     );
 };
 
-const TWITTER_REGEX = /https?:\/\/(?:www\.)?(?:twitter|x)\.com\/\S+/gi;
-
 function cleanMessage(msg: MessageObject) {
     if (!msg.content?.includes("http")) return;
 
@@ -108,7 +112,7 @@ function cleanMessage(msg: MessageObject) {
 
 export default definePlugin({
     name: "FXTwitter",
-    description: `(v${VERSION}) Automatically rewrites Twitter/X links into FXTwitter links with toggleable modes. ${UPDATE_URL}`,
+    description: `Automatically rewrites Twitter/X links into FXTwitter links with toggleable modes. ${UPDATE_URL}`,
     authors: [{ name: "@dahnaa, Dona", id: 821451701331820615n }],
     settings,
 
@@ -116,10 +120,12 @@ export default definePlugin({
         if (notified) return;
         notified = true;
 
+        if (!settings.store.notifications) return;
+
         showNotification({
-            title: "fxTwitter",
-            body: `(v${VERSION}) View the fxTwitter GitHub repository.`,
-            color: "#1da1f2",
+            title: "FXTwitter",
+            body: `(v${VERSION}) Click here to check for any updates, manual-installation is required.`,
+            color: "#8c4df8ff",
             onClick: () => window.open(UPDATE_URL)
         });
     },
