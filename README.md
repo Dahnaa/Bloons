@@ -40,8 +40,8 @@ Excludes photos and videos, showing only the post’s text.
 
 ---
 
-## ⚠️ Disclaimer
-
-> This plugin is **not officially supported by Vencord**.  
-> Use at your own discretion.
+> ## Disclaimer
+>
+> *This plugin is **not officially supported by Vencord**.*  
+> *Use at your own discretion.*
 
