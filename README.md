@@ -7,7 +7,7 @@ I made this because typing `fxtwitter.com` every single time was annoying, so I 
 
 ---
 
-## 👀 Features / Settings
+## Features / Settings
 
 - Automatically converts `twitter.com` / `x.com` links to `fxtwitter.com`
 - Chat bar icon that toggles between modes
@@ -15,7 +15,7 @@ I made this because typing `fxtwitter.com` every single time was annoying, so I 
 
 ---
 
-## 🔗 Modes
+## Modes
 
 ### **Normal**
 Uses the standard `fxtwitter.com` embed.
@@ -34,18 +34,10 @@ Excludes photos and videos, showing only the post’s text.
 
 ---
 
-## 👤 Author
+## References
 
-- **Dahnaa**  
-  GitHub: https://github.com/Dahnaa  
-  Discord: `@dahnaa`
-
----
-
-## 📎 Resources
-
-- FXTwitter / FxEmbed project  
-  https://github.com/FixTweet/FxTwitter
+[![FxEmbed](https://img.shields.io/badge/Powered%20by-FXTwitter-1da1f2.svg)](https://github.com/FixTweet/FxTwitter)
+[![Vencord](https://img.shields.io/badge/Powered%20by-FXTwitter-1da1f2.svg)](https://github.com/Vendicated/Vencord)
 
 ---
 
@@ -56,6 +48,10 @@ Excludes photos and videos, showing only the post’s text.
 
 ---
 
+> Issues? Contact me  
+> Discord: `@dahnaa`
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
+
 
