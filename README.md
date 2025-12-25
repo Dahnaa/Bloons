@@ -1,4 +1,4 @@
-# FXTwitter
+# Info
 
 A custom **Vencord plugin** that automatically rewrites Twitter/X links into *fxtwitter* links with toggleable preview modes.  
 I made this because typing `fxtwitter.com` every single time was annoying, so I lowkey made an entire plugin to do it for me 😭
