@@ -1,20 +1,40 @@
+# FXTwitter
 
-# FxTwitter
-A custom Vencord plugin that automatically rewrites Twitter/X links into FXTwitter links with toggleable modes.
-Made this because it was hella annoying to type out FX everytime I wanna send a twitter link, so I lowkey made an entire plugin to do it for me 😭
-> ## Disclaimer
-> This Plugin isn't offically supported by vencord.
+A custom **Vencord plugin** that automatically rewrites Twitter/X links into **FXTwitter** links — with **toggleable preview modes**.
 
-![Logo](https://i.imgur.com/M9qy47B.png)
+I made this because typing `fxtwitter.com` every single time was annoying, so I decided to overengineer the solution instead 😭
 
-## Authors
+---
 
-- [@Dahnaa](https://www.github.com/Dahnaa) | Discord: @dahnaa
+### 👀 Features / Settings
 
+- Automatically converts `twitter.com` / `x.com` links to `fxtwitter.com`
+- Chat bar icon that toggles between modes
+- Startup notification linking to the repository
 
-## Resources
+---
+### 🔗 Modes
 
-[FxEmbed](https://github.com/Dahnaa/fxTwitter-plugin/edit/main/README.md)
+#### **Normal**
+Uses the standard `fxtwitter.com` embed.  
 
+---
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+#### **Domain**  
+`d.fxtwitter.com`  
+
+Directly links a post’s media without the full embed.
+
+---
+
+#### **Gallery**  
+`g.fxtwitter.com`  
+
+Generate minimal embeds with just the post's media and author information without other distractions.
+
+---
+
+#### **Text**  
+`t.fxtwitter.com`  
+
+Excludes photos and videos, showing only the post’s text.
