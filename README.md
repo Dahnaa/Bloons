@@ -15,7 +15,7 @@ I made this because typing `fxtwitter.com` every single time was annoying, so I 
 ---
 ## 🔗 Modes
 
-# **Normal**
+### **Normal**
 Uses the standard `fxtwitter.com` embed.  
 
 ---
