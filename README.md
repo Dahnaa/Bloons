@@ -1,4 +1,10 @@
-# Info
+# FXTwitter Plugin
+
+Contact my Discord if there's every any problems: `@dahnaa`
+
+[![FxEmbed](https://img.shields.io/badge/Github-FxEmbed-2038d4.svg)](https://github.com/FixTweet/FxTwitter)
+[![Vencord](https://img.shields.io/badge/Github-Vencord-a06ca3.svg)](https://github.com/Vendicated/Vencord)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
 A custom **Vencord plugin** that automatically rewrites Twitter/X links into *fxtwitter* links with toggleable preview modes.  
 I made this because typing `fxtwitter.com` every single time was annoying, so I lowkey made an entire plugin to do it for me 😭
@@ -34,24 +40,11 @@ Excludes photos and videos, showing only the post’s text.
 
 ---
 
-## References
-
-[![FxEmbed](https://img.shields.io/badge/FxEmbed-1da1f2.svg)](https://github.com/FixTweet/FxTwitter)
-[![Vencord](https://img.shields.io/badge/Vencord-1da1f2.svg)](https://github.com/Vendicated/Vencord)
-
----
-
 ## ⚠️ Disclaimer
 
 > This plugin is **not officially supported by Vencord**.  
 > Use at your own discretion.
 
 ---
-
-> Issues? Contact me  
-> Discord: `@dahnaa`
-
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-
 
 
